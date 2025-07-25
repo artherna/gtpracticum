@@ -151,7 +151,7 @@ def parse_modbus(packet):
                             else:
                                 val = get_value(uints[i],1800,-600,65535)
                                 readings = read_provider_objects(se)
-                                trusted_val = readings[se[i]]['avg']
+                                trusted_val = readings[se[i]]
 
                                 diff = 0
                                 if val > trusted_val:
